@@ -30,26 +30,26 @@ curl http://www.linux-projects.org/listing/uv4l_repo/lpkey.asc | sudo apt-key ad
 sudo nano /etc/apt/source.list
 맨 아래 부분에 추가
 deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main
-2.변경된 저장소를 업데이트 합니다
+2. 변경된 저장소를 업데이트 합니다
 sudo apt-get update
-3.UV4L 모듈을 설치합니다.
+3. UV4L 모듈을 설치합니다.
 sudo apt-get install uv4l uv4l-raspicam
-4.부팅시 자동으로 UVL 드라이버 로드하기위한 문장
+4. 부팅시 자동으로 UVL 드라이버 로드하기위한 문장
 sudo apt-get install uv4l-raspicam-extras
-5.펌웨어 업데이트
+5. 펌웨어 업데이트
 sudo rpi-update
-6.UV4L 서비스 재시작
+6. UV4L 서비스 재시작
 sudo service uv4l_raspicam restart
-7.uvrl-server 설치
+7. uvrl-server 설치
 sudo apt-get install uv4l-server uv4l-uvc uv4l-xscreen uv4l-mjpegstream uv4l-dummy uv4l-raspidisp
-8.WebRTC Streaming server 설치(양방향 스트리밍)
+8. WebRTC Streaming server 설치(양방향 스트리밍)
 sudo apt-get install uv4l-webrtc
-9.ssl 구성(보안상 이유 입력해야함)
+9. ssl 구성(보안상 이유 입력해야함)
 openssl genrsa -out selfsign.key 2048&& openssl req -new-x509 -key selfsign.key -out selfsign.crt -sha256
 Country 설정 부분은 KO 입력후나머지는 .을 치고 엔터를 눌러 default값을 주게한다
-10.xmpp-bridge 설치
+10. xmpp-bridge 설치
 sudo apt-get install uv4l-xmpp-bridge
-11.설치완료
+11. 설치완료
 reboot 후 netstat -nlpt를 이용하여 8080포트활성화 확인
 
 #라즈베리파이에서 메세지를 보내기위한 ssmtp설치
