@@ -1,5 +1,8 @@
 # SmartDectector
 PIR센서와 pi camera를 이용한 차량내 동작 감지 카메라
+동작 감지시 해당 google e-mail로 메세지 전송 
+1. 메세지 내용에 있는 해당 주소링크를 통해 차량내부를 확인가능함
+2. 간단한 app inventor에서 제작한 어플을 이용한 차량 내부 확인
 
 #카메라를 사용하기 위한 motion설치
 sudo apt-get install motion 입력해서 설치
